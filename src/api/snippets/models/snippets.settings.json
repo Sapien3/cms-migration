@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "snippets",
+  "info": {
+    "name": "Snippets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "FacebookURL": {
+      "type": "string"
+    },
+    "SnippetCategories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "snippet-categories.snippet-categories"
+    }
+  }
+}

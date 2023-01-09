@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_article_articles",
+  "info": {
+    "name": "Article",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "collection": "article"
+    }
+  }
+}

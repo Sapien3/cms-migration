@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_categories_ads_categories_ads",
+  "info": {
+    "name": "CategoriesAds",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "collection": "section"
+    }
+  }
+}

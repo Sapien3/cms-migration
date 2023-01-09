@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplements_categories",
+  "info": {
+    "name": "Supplements Categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "SupplementCategoryTitle": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    }
+  }
+}

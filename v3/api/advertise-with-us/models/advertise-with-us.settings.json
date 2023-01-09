@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "advertise_with_uses",
+  "info": {
+    "name": "Advertise with Us"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "AdvertiseWithUsPlaceholder": {
+      "type": "string"
+    },
+    "PhoneNumber": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "AdvertiseWithUsContent": {
+      "type": "text"
+    },
+    "ContactContent": {
+      "type": "text"
+    },
+    "SendAMessagePlaceholder": {
+      "type": "richtext"
+    },
+    "ContactUsPlaceholder": {
+      "type": "richtext"
+    }
+  }
+}

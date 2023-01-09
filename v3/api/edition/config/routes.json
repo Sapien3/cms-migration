@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/editions",
+      "handler": "edition.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/customSort",
+      "handler": "edition.readSortedEditionsFromStore",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/latestMalaf",
+      "handler": "edition.getLatestEditionMalaf",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/count",
+      "handler": "edition.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/:id",
+      "handler": "edition.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/editions",
+      "handler": "edition.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/editions/:id",
+      "handler": "edition.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/editions/:id",
+      "handler": "edition.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

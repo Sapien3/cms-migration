@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_featured_article_featured_articles",
+  "info": {
+    "name": "Featured Article",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "featured": {
+      "model": "article"
+    }
+  }
+}

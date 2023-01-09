@@ -1,0 +1,71 @@
+{
+  "name": "lavendar-monk",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "debug": "node --inspect=127.0.0.1:9229 ./node_modules/strapi/bin/strapi.js develop",
+    "develop": "strapi develop",
+    "start": "cross-env NODE_ENV=production node --max-old-space-size=8192 ./node_modules/strapi/bin/strapi.js start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "test": "jest --forceExit --detectOpenHandles",
+    "commit": "git add . && git commit -m",
+    "installAndBuild": "npm install && NODE_ENV=production npm run build && npm run start"
+  },
+  "devDependencies": {
+    "async-mutex": "^0.2.6",
+    "jest": "^26.6.3",
+    "mssql": "^6.3.1",
+    "package-diff": "0.0.6",
+    "stack-trace": "0.0.10"
+  },
+  "dependencies": {
+    "@buffetjs/styles": "3.3.8",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.3",
+    "@tinymce/tinymce-react": "^3.10.1",
+    "@use-it/interval": "^1.0.0",
+    "@wojtekmaj/react-daterange-picker": "^4.1.0",
+    "apollo-server-plugin-response-cache": "^0.5.8",
+    "aws-sdk": "^2.834.0",
+    "axios": "^0.21.1",
+    "boom": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.6.0",
+    "form-data": "^4.0.0",
+    "googleapis": "^61.0.0",
+    "graphql-fields": "^2.0.3",
+    "graphql-request": "^5.0.0",
+    "knex": "^0.20.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "slug-arabic": "^1.0.0",
+    "strapi-middleware-cache": "^2.1.8",
+    "strapi-plugin-navigation": "1.0.0-beta.13",
+    "strapi-provider-upload-aws-s3-custom": "file:providers/strapi-provider-upload-aws-s3-custom",
+    "tinymce": "5.6.2",
+    "uuid": "^9.0.0",
+    "xml2js": "^0.4.23",
+    "@strapi/strapi": "4.5.5",
+    "@strapi/plugin-graphql": "4.5.5",
+    "@strapi/plugin-users-permissions": "4.5.5"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "816573c1-c204-47be-ac59-27dcc4290e9e"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      ".tmp",
+      ".cache"
+    ],
+    "testEnvironment": "node"
+  },
+  "license": "MIT"
+}

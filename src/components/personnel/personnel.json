@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_personnel_personnel",
+  "info": {
+    "icon": "chess-knight",
+    "displayName": "Personnel"
+  },
+  "options": {},
+  "attributes": {
+    "Designation": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

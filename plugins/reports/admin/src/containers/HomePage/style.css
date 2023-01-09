@@ -1,0 +1,24 @@
+.reports-plugin table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+.reports-plugin tr:nth-child(even) {
+  background: #f1f7f8;
+}
+.reports-plugin th,
+.reports-plugin td {
+  border: 1px solid #a0c8cf;
+  padding: 0.75rem;
+  text-align: center;
+}
+.reports-plugin th {
+  background: #74afb9;
+  color: #fff;
+}
+.reports-plugin td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

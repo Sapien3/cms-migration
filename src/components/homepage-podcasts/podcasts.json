@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_podcasts_podcasts",
+  "info": {
+    "icon": "file-audio",
+    "description": "",
+    "displayName": "HomepagePodcasts"
+  },
+  "options": {},
+  "attributes": {
+    "podcasts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::podcast.podcast"
+    }
+  }
+}

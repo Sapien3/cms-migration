@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_featured_featured_malafs",
+  "info": {
+    "icon": "book-open",
+    "description": "",
+    "displayName": "Featured Malaf"
+  },
+  "options": {},
+  "attributes": {
+    "malafat": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::malafat.malafat"
+    }
+  }
+}

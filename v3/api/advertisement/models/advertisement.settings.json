@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertisements",
+  "info": {
+    "name": "advertisement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "displayOn": {
+      "type": "enumeration",
+      "enum": [
+        "homepage",
+        "category"
+      ]
+    },
+    "category": {
+      "model": "section"
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "cat_after_breadcrumbs",
+        "cat_left_sidebar_top",
+        "cat_left_sidebar_bottom",
+        "cat_before_footer",
+        "home_after_banner",
+        "home_after_sub_banner",
+        "home_after_audio_section",
+        "home_before_video_section",
+        "home_before_authors",
+        "home_between_arab_world",
+        "home_supplement_left",
+        "home_world_section_left",
+        "article_before_infinitescroll",
+        "article_horizontal",
+        "every_nth_word",
+        "mobile_carousel"
+      ]
+    },
+    "device": {
+      "type": "enumeration",
+      "enum": [
+        "desktop",
+        "mobile",
+        "all_devices"
+      ]
+    },
+    "slotPath": {
+      "type": "string"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

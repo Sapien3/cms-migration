@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_categories_featured_categories_featureds",
+  "info": {
+    "icon": "arrow-circle-right",
+    "displayName": "CategoriesFeatured"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    }
+  }
+}

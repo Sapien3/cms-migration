@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/getAuthors",
+      "handler": "reports.getAuthors",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

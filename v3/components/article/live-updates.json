@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_article_live_updates",
+  "info": {
+    "name": "Live Updates",
+    "icon": "bullhorn",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "published_on": {
+      "type": "datetime"
+    }
+  }
+}

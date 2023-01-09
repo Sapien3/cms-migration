@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "editions",
+  "info": {
+    "name": "edition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": "",
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "malafat": {
+      "model": "malafat",
+      "via": "edition"
+    },
+    "EditionNumber": {
+      "type": "biginteger",
+      "unique": true
+    },
+    "EditionNumberNative": {
+      "type": "string"
+    },
+    "EditionDate": {
+      "type": "datetime"
+    },
+    "EditionTitle": {
+      "type": "string"
+    },
+    "IsArchived": {
+      "type": "boolean"
+    },
+    "EditionPDF": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "supplement": {
+      "model": "supplements",
+      "via": "edition"
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "time": {
+      "type": "string"
+    },
+    "Article": {
+      "via": "Edition",
+      "collection": "article"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "name": "AboutUs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "text"
+    },
+    "Personnel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "personnel.personnel"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "singularName": "author",
+    "pluralName": "authors",
+    "displayName": "Author",
+    "name": "author"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "FirstName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "DisplayName": {
+      "type": "string"
+    },
+    "DisplayNameArabic": {
+      "type": "string"
+    },
+    "Biography": {
+      "type": "richtext"
+    },
+    "role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.role"
+    },
+    "DisplayPicture": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "TwitterURL": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    },
+    "Articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "authors"
+    },
+    "easy_news": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::easy-new.easy-new",
+      "mappedBy": "Authors"
+    }
+  }
+}

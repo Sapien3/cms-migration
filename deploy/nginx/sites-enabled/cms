@@ -1,0 +1,52 @@
+upstream strapi {
+    #server 127.0.0.1:1337;
+    server 127.0.0.1:1338;
+    #server 127.0.0.1:1339;
+}
+
+server {
+  listen          80;
+  server_name    akhbarsolutions.com;
+  access_log      /var/log/nginx/cms-access.log;
+  error_log       /var/log/nginx/cms-error.log;
+
+
+
+  location / {
+    proxy_pass      http://strapi;
+    proxy_set_header Upgrade           $http_upgrade;
+    proxy_set_header Connection        "upgrade";
+    proxy_set_header Host              $host;
+    proxy_set_header X-Real-IP         $remote_addr;
+    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host  $host;
+    proxy_set_header X-Forwarded-Port  $server_port;
+  }
+}
+
+
+server {
+  server_name    akhbarsolutions.com;
+  access_log      /var/log/nginx/cms-access.log;
+  error_log       /var/log/nginx/cms-error.log;
+
+
+  listen 443 ssl;
+    listen [::]:443 ssl;
+    include snippets/self-signed.conf;
+    include snippets/ssl-params.conf;
+
+  location / {
+proxy_pass      http://strapi;
+    proxy_set_header Upgrade           $http_upgrade;
+    proxy_set_header Connection        "upgrade";
+    proxy_set_header Host              $host;
+    proxy_set_header X-Real-IP         $remote_addr;
+    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host  $host;
+    proxy_set_header X-Forwarded-Port  $server_port;
+proxy_pass_request_headers on;
+ }
+}

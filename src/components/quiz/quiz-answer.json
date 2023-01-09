@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_quiz_quiz_answers",
+  "info": {
+    "icon": "surprise",
+    "description": "",
+    "displayName": "QuizAnswer"
+  },
+  "options": {},
+  "attributes": {
+    "answer": {
+      "type": "string",
+      "required": true
+    },
+    "IsCorrect": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

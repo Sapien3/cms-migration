@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_articles",
+  "info": {
+    "name": "TopArticle",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "article": {
+      "via": "top_article",
+      "model": "article"
+    },
+    "url": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "session": {
+      "type": "integer"
+    },
+    "view": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_categories",
+  "info": {
+    "name": "Video Categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Category": {
+      "type": "string"
+    },
+    "videos": {
+      "via": "VideoCategories",
+      "collection": "videos"
+    }
+  }
+}

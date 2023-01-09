@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "easy_news",
+  "info": {
+    "name": "Easy news",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "Body": {
+      "type": "richtext"
+    },
+    "Easy_news_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Authors": {
+      "collection": "author",
+      "via": "easy_news",
+      "dominant": true
+    },
+    "FeaturedImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "PrimarySection": {
+      "model": "section"
+    }
+  }
+}

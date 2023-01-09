@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_featured_article_featured_articles",
+  "info": {
+    "icon": "star",
+    "description": "",
+    "displayName": "Featured Article"
+  },
+  "options": {},
+  "attributes": {
+    "featured": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_personnel_packages",
+  "info": {
+    "icon": "ad",
+    "displayName": "Package"
+  },
+  "options": {},
+  "attributes": {
+    "PackagePlaceholder": {
+      "type": "string"
+    }
+  }
+}

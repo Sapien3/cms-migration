@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "Tag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "DisplayOrder": {
+      "type": "biginteger"
+    },
+    "TagTypeID": {
+      "model": "tag-type"
+    },
+    "Articles": {
+      "via": "tags",
+      "collection": "article"
+    }
+  }
+}

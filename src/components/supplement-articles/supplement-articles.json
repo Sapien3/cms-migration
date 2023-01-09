@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_supplement_articles_supplement_articles",
+  "info": {
+    "icon": "angle-double-right",
+    "description": "",
+    "displayName": "SupplementArticles"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    }
+  }
+}

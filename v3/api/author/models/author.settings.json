@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "Author",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "FirstName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "DisplayName": {
+      "type": "string"
+    },
+    "DisplayNameArabic": {
+      "type": "string"
+    },
+    "Biography": {
+      "type": "richtext"
+    },
+    "role": {
+      "plugin": "users-permissions",
+      "model": "role"
+    },
+    "DisplayPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "TwitterURL": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "integer"
+    },
+    "Articles": {
+      "via": "authors",
+      "collection": "article"
+    },
+    "easy_news": {
+      "via": "Authors",
+      "collection": "easy-news"
+    }
+  }
+}

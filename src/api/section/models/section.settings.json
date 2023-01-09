@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "name": "Categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "biginteger"
+    },
+    "WebsiteColor": {
+      "type": "string"
+    },
+    "ParentSectionID": {
+      "model": "section"
+    },
+    "DisplayArticlesLimit": {
+      "type": "biginteger"
+    },
+    "navigations": {
+      "plugin": "navigation",
+      "collection": "navigationitem",
+      "via": "related"
+    },
+    "ApiString": {
+      "type": "string"
+    },
+    "CategoriesFeatured": {
+      "type": "component",
+      "repeatable": false,
+      "component": "categories-featured.categories-featured"
+    },
+    "CategoryDescription": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_snippet_categories_snippet_categories",
+  "info": {
+    "name": "SnippetCategories",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "collection": "section"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_quiz_results",
+  "info": {
+    "icon": "check",
+    "description": "",
+    "displayName": "Result"
+  },
+  "options": {},
+  "attributes": {
+    "Result": {
+      "type": "string",
+      "required": true
+    },
+    "File": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "MinCorrect": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "malafats",
+  "info": {
+    "name": "Malafat",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "MalafatFeaturedText": {
+      "type": "string"
+    },
+    "MalafatFeaturedDescription": {
+      "type": "richtext"
+    },
+    "edition": {
+      "via": "malafat",
+      "model": "edition"
+    },
+    "MalafatCoverPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "MalafatSummary": {
+      "type": "text"
+    },
+    "MalafatShortURL": {
+      "type": "string"
+    },
+    "Attachment": {
+      "type": "string"
+    },
+    "Caption": {
+      "type": "string"
+    },
+    "ArticleID": {
+      "type": "integer"
+    },
+    "articles": {
+      "via": "Malaf",
+      "collection": "article"
+    }
+  }
+}

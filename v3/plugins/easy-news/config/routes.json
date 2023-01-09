@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "easy-news.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/upload/xml",
+      "handler": "easy-news.uploadXML",
+      "config": {
+        "policies": ["global::isAuthenticated"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/upload/media",
+      "handler": "easy-news.uploadMedia",
+      "config": {
+        "policies": ["global::isAuthenticated"]
+      }
+    }
+  ]
+}

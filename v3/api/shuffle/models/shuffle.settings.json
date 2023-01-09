@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "shuffles",
+  "info": {
+    "name": "Shuffle"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ShuffleArticles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shuffle-articles.shuffle-articles"
+    }
+  }
+}

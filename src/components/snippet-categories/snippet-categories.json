@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_snippet_categories_snippet_categories",
+  "info": {
+    "icon": "arrow-right",
+    "displayName": "SnippetCategories"
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section"
+    }
+  }
+}

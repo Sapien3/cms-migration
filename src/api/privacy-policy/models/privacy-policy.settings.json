@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policies",
+  "info": {
+    "name": "PrivacyPolicy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "PrivacyPolicyPlaceholder": {
+      "type": "string"
+    },
+    "PrivacyPolicyContent": {
+      "type": "text"
+    },
+    "HeadingPlaceholder": {
+      "type": "string"
+    },
+    "HeadingContent": {
+      "type": "text"
+    },
+    "TitlePlaceholder": {
+      "type": "string"
+    },
+    "TitleContent": {
+      "type": "text"
+    }
+  }
+}

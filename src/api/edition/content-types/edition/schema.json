@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "editions",
+  "info": {
+    "singularName": "edition",
+    "pluralName": "editions",
+    "displayName": "Edition",
+    "name": "edition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": "",
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "malafat": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::malafat.malafat",
+      "inversedBy": "edition"
+    },
+    "EditionNumber": {
+      "type": "biginteger",
+      "unique": true
+    },
+    "EditionNumberNative": {
+      "type": "string"
+    },
+    "EditionDate": {
+      "type": "datetime"
+    },
+    "EditionTitle": {
+      "type": "string"
+    },
+    "IsArchived": {
+      "type": "boolean"
+    },
+    "EditionPDF": {
+      "type": "media",
+      "allowedTypes": [
+        "files"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "supplement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::supplement.supplement",
+      "inversedBy": "edition"
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "time": {
+      "type": "string"
+    },
+    "Article": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "Edition"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      "strapi-connector-bookshelf@3.4.5",
+      "/home/james/www/al-akbhar-admin"
+    ]
+  ],
+  "_from": "strapi-connector-bookshelf@3.4.5",
+  "_id": "strapi-connector-bookshelf@3.4.5",
+  "_inBundle": false,
+  "_integrity": "sha512-zJOXRCMgTM3I8+T/dwGCebttVr0E21vF1uMAAp5KD6seMmj7HQw15lJFvDK7Lj0d/kP6MRlQuahXa9JKfdbh5g==",
+  "_location": "/strapi-connector-bookshelf",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "strapi-connector-bookshelf@3.4.5",
+    "name": "strapi-connector-bookshelf",
+    "escapedName": "strapi-connector-bookshelf",
+    "rawSpec": "3.4.5",
+    "saveSpec": null,
+    "fetchSpec": "3.4.5"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/strapi-connector-bookshelf/-/strapi-connector-bookshelf-3.4.5.tgz",
+  "_spec": "3.4.5",
+  "_where": "/home/james/www/al-akbhar-admin",
+  "author": {
+    "name": "Strapi team",
+    "email": "hi@strapi.io",
+    "url": "http://strapi.io"
+  },
+  "bugs": {
+    "url": "https://github.com/strapi/strapi/issues"
+  },
+  "dependencies": {
+    "bookshelf": "^1.0.1",
+    "date-fns": "^2.8.1",
+    "inquirer": "^6.3.1",
+    "lodash": "4.17.20",
+    "p-map": "4.0.0",
+    "pluralize": "^8.0.0",
+    "rimraf": "3.0.2",
+    "strapi-utils": "3.4.5"
+  },
+  "description": "Bookshelf hook for the Strapi framework",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "gitHead": "4f9cc8a22cb1f48e4da7617a99984dc45d0b4a43",
+  "homepage": "http://strapi.io",
+  "keywords": [
+    "bookshelf",
+    "hook",
+    "migrations",
+    "orm",
+    "sql",
+    "strapi"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "./lib",
+  "maintainers": [
+    {
+      "name": "Strapi team",
+      "email": "hi@strapi.io",
+      "url": "http://strapi.io"
+    }
+  ],
+  "name": "strapi-connector-bookshelf",
+  "peerDependencies": {
+    "knex": "^0.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strapi/strapi.git"
+  },
+  "scripts": {
+    "test": "echo not tests yet"
+  },
+  "strapi": {
+    "dependencies": [
+      "knex"
+    ]
+  },
+  "version": "3.4.5"
+}

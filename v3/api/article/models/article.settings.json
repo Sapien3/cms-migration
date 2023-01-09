@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "authors": {
+      "collection": "author",
+      "via": "Articles",
+      "dominant": true
+    },
+    "FeaturedImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Headline": {
+      "type": "string",
+      "required": true
+    },
+    "Slugline": {
+      "type": "string"
+    },
+    "Byline": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "richtext"
+    },
+    "RelatedArticles": {
+      "collection": "article"
+    },
+    "PrimarySection": {
+      "model": "section"
+    },
+    "ShortURL": {
+      "type": "string"
+    },
+    "publish_at": {
+      "type": "datetime"
+    },
+    "SocialTitle": {
+      "type": "string"
+    },
+    "SocialImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Section": {
+      "collection": "section"
+    },
+    "Summary": {
+      "type": "text"
+    },
+    "Attachment": {
+      "type": "string"
+    },
+    "Caption": {
+      "type": "string"
+    },
+    "ReadCount": {
+      "type": "integer"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "Articles",
+      "dominant": true
+    },
+    "HideFeatured": {
+      "type": "boolean"
+    },
+    "top_article": {
+      "model": "top-article",
+      "via": "article"
+    },
+    "link": {
+      "type": "string"
+    },
+    "Edition": {
+      "model": "edition",
+      "via": "Article"
+    },
+    "Malaf": {
+      "model": "malafat",
+      "via": "articles"
+    },
+    "Supplement": {
+      "model": "supplements",
+      "via": "articles"
+    }
+  }
+}

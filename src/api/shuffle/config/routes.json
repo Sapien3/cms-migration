@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shuffle",
+      "handler": "shuffle.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shuffle",
+      "handler": "shuffle.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shuffle",
+      "handler": "shuffle.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

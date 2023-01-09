@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_roles",
+  "info": {
+    "singularName": "role",
+    "pluralName": "roles",
+    "displayName": "Role",
+    "name": "Role"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "required": true,
+      "configurable": false
+    },
+    "description": {
+      "type": "string",
+      "configurable": false
+    },
+    "type": {
+      "type": "string",
+      "unique": true,
+      "configurable": false
+    },
+    "permissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.permission",
+      "mappedBy": "role"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "role"
+    }
+  }
+}

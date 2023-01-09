@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/easy-news",
+      "handler": "easy-news.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/easy-news/count",
+      "handler": "easy-news.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/easy-news/:id",
+      "handler": "easy-news.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/easy-news",
+      "handler": "easy-news.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/easy-news/:id",
+      "handler": "easy-news.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/easy-news/:id",
+      "handler": "easy-news.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_categories_featured_categories_featureds",
+  "info": {
+    "name": "CategoriesFeatured",
+    "icon": "arrow-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "model": "article"
+    }
+  }
+}

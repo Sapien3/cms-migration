@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_article_grid_article_grids",
+  "info": {
+    "icon": "grip-horizontal",
+    "description": "",
+    "displayName": "Articles Grid"
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

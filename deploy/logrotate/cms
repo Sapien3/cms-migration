@@ -1,0 +1,9 @@
+/home/wick/.pm2/logs/*.log {
+	missingok
+	rotate 3
+	create 0644 wick wick
+	copytruncate
+	su wick wick
+	compress
+	size 200M
+}

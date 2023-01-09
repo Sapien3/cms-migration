@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_podcasts_podcasts",
+  "info": {
+    "name": "HomepagePodcasts",
+    "icon": "file-audio",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "podcasts": {
+      "collection": "podcasts"
+    }
+  }
+}

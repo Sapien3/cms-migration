@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_homepage_authors_homepage_authors",
+  "info": {
+    "name": "HomepageAuthors",
+    "icon": "award",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "authors": {
+      "collection": "author"
+    }
+  }
+}

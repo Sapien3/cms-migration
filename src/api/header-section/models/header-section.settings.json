@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "header_sections",
+  "info": {
+    "name": "HeaderSection"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

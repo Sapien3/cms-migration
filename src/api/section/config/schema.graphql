@@ -1,0 +1,48 @@
+const { find2 } = require('../controllers/section')
+
+module.exports = {
+  definition: `
+  type Section2 {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    Title: String
+    Icon: String
+    DisplayOrder: Long
+    WebsiteColor: String
+    ParentSectionID: Section2
+    DisplayArticlesLimit: Long
+    ApiString: String
+    CategoriesFeatured: ComponentCategoriesFeaturedCategoriesFeatured
+    CategoryDescription: String
+    navigations(
+      sort: String
+      limit: Int
+      start: Int
+      where: JSON
+    ): [NavigationNavigationitem]
+    Article(sort: String, limit: Int, start: Int, where: JSON): [Article]
+    Articles(sort: String, limit: Int, start: Int, where: JSON): [Article]
+  }
+  `,
+  query: `
+  sections2(
+    sort: String
+    limit: Int
+    start: Int
+    where: JSON
+    publicationState: PublicationState
+  ): [Section2]
+  `,
+  type: {
+  },
+  resolver: {
+    Query: {
+      sections2: {
+        description: 'Return the section with articles',
+        resolver: find2,
+        resolverOf: 'application::section.section.find2'
+      }
+    }
+  }
+};

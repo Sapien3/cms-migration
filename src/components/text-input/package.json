@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_text_input_packages",
+  "info": {
+    "icon": "audio-description",
+    "displayName": "Package"
+  },
+  "options": {},
+  "attributes": {
+    "Value1": {
+      "type": "string"
+    },
+    "value2": {
+      "type": "string"
+    },
+    "subscribePlaceholder": {
+      "type": "string"
+    },
+    "subscribeDescription": {
+      "type": "text"
+    },
+    "packagePlaceholder": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_supplement_articles_supplement_articles",
+  "info": {
+    "name": "SupplementArticles",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "model": "article"
+    }
+  }
+}

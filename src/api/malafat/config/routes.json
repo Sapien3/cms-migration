@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/malafats",
+      "handler": "malafat.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/malafats/featured",
+      "handler": "malafat.getFeaturedMalafId",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/malafats/readFeaturedId",
+      "handler": "malafat.readFeaturedFromStore",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/malafats/count",
+      "handler": "malafat.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/malafats/:id",
+      "handler": "malafat.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/malafats",
+      "handler": "malafat.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/malafats/:id",
+      "handler": "malafat.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/malafats/:id",
+      "handler": "malafat.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

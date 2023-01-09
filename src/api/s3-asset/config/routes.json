@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/s3-assets",
+      "handler": "s3-asset.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/s3-assets/count",
+      "handler": "s3-asset.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/s3-assets/:id",
+      "handler": "s3-asset.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/s3-assets",
+      "handler": "s3-asset.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/s3-assets/:id",
+      "handler": "s3-asset.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/s3-assets/:id",
+      "handler": "s3-asset.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/s3-assets/serve/:key*",
+      "handler": "s3-asset.serve",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

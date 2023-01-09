@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tag_types",
+  "info": {
+    "name": "TagType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "DisplayOrder": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplements",
+  "info": {
+    "name": "Supplements",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "GifMedia": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "FeaturedImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SupplementFeaturedArticle": {
+      "type": "component",
+      "repeatable": false,
+      "component": "supplement-articles.supplement-articles"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "supplements_category": {
+      "model": "supplements-categories"
+    },
+    "Attachment": {
+      "type": "string"
+    },
+    "Caption": {
+      "type": "string"
+    },
+    "articles": {
+      "via": "Supplement",
+      "collection": "article"
+    },
+    "edition": {
+      "via": "supplement",
+      "model": "edition"
+    }
+  }
+}

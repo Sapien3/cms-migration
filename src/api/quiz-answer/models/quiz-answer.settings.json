@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quiz_answers",
+  "info": {
+    "name": "QuizAnswer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "quiz": {
+      "model": "quiz"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "quiz.quiz-answer"
+    }
+  }
+}

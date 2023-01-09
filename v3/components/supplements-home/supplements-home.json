@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_supplements_home_supplements_homes",
+  "info": {
+    "name": "SupplementsHome",
+    "icon": "angle-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "SupplementTitle": {
+      "type": "string"
+    },
+    "SupplementGifHome": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SupplementURLHome": {
+      "type": "string"
+    }
+  }
+}

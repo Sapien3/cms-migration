@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shuffle_articles_shuffle_articles",
+  "info": {
+    "name": "ShuffleArticles",
+    "icon": "angry"
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "collection": "article"
+    }
+  }
+}

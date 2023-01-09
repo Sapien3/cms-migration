@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_text_input_text_inputs",
+  "info": {
+    "icon": "align-right",
+    "displayName": "TextInput"
+  },
+  "options": {},
+  "attributes": {
+    "placeholder": {
+      "type": "json"
+    }
+  }
+}

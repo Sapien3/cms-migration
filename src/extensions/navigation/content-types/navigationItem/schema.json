@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigations_items",
+  "info": {
+    "singularName": "navigation-item",
+    "pluralName": "navigation-items",
+    "displayName": "NavigationItem",
+    "name": "navigationItem"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "isManaged": false,
+    "comment": "Navigation Item"
+  },
+  "attributes": {
+    "title": {
+      "type": "text",
+      "configurable": false,
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "INTERNAL",
+        "EXTERNAL"
+      ],
+      "default": "INTERNAL",
+      "configurable": false
+    },
+    "path": {
+      "type": "uid",
+      "targetField": "title",
+      "configurable": false
+    },
+    "externalPath": {
+      "type": "text",
+      "configurable": false
+    },
+    "uiRouterKey": {
+      "type": "string",
+      "configurable": false
+    },
+    "menuAttached": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "configurable": false
+    },
+    "related": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::section.section",
+      "inversedBy": "navigations"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::navigation.navigationItem"
+    },
+    "master": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::navigation.navigation"
+    },
+    "audience": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::navigation.audience"
+    }
+  }
+}

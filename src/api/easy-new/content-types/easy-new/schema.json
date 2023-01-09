@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "easy_news",
+  "info": {
+    "singularName": "easy-new",
+    "pluralName": "easy-news",
+    "displayName": "Easy-new",
+    "name": "easy-new"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "Body": {
+      "type": "richtext"
+    },
+    "Easy_news_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::author.author",
+      "inversedBy": "easy_news"
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "PrimarySection": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::section.section"
+    }
+  }
+}

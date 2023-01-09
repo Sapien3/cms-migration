@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_homepage_custom_tags_homepage_custom_tags",
+  "info": {
+    "name": "HomepageCustomTags",
+    "icon": "angle-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactuses",
+  "info": {
+    "name": "ContactUs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "ConnectWithUsPlaceholder": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "PhoneNumber1": {
+      "type": "string"
+    },
+    "PhoneNumber2": {
+      "type": "string"
+    },
+    "DoorNo": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "text"
+    }
+  }
+}

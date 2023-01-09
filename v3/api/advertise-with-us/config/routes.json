@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/advertise-with-us",
+      "handler": "advertise-with-us.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/advertise-with-us",
+      "handler": "advertise-with-us.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/advertise-with-us",
+      "handler": "advertise-with-us.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

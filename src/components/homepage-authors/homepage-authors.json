@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_homepage_authors_homepage_authors",
+  "info": {
+    "icon": "award",
+    "description": "",
+    "displayName": "HomepageAuthors"
+  },
+  "options": {},
+  "attributes": {
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "subscribes",
+  "info": {
+    "name": "Subscribe"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "SubscribeToPlaceholder": {
+      "type": "string"
+    },
+    "SubscribeToElectronicNewsletterPlaceholder": {
+      "type": "string"
+    },
+    "SubscribeToNewspaperPlaceholder": {
+      "type": "string"
+    },
+    "Package": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-input.package"
+    }
+  }
+}

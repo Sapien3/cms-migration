@@ -1,0 +1,40 @@
+const { find2 } = require('../controllers/author')
+
+module.exports = {
+  definition: `
+  type Author2 {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    FirstName: String
+    LastName: String
+    DisplayName: String
+    DisplayNameArabic: String
+    Biography: String
+    role: UsersPermissionsRole
+    DisplayPicture: UploadFile
+    TwitterAuthor: String
+    DisplayOrder: Int
+    Articles(sort: String, limit: Int, start: Int, where: JSON): [Article]
+  }
+  `,
+  query: `
+  authors2(
+    sort: String
+    limit: Int
+    start: Int
+    where: JSON
+  ): [Author2]
+  `,
+  type: {
+  },
+  resolver: {
+    Query: {
+      authors2: {
+        description: 'Return the authors with articles',
+        resolver: find2,
+        resolverOf: 'application::author.author.find2'
+      }
+    }
+  }
+};

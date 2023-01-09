@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_media_gallery_galleries",
+  "info": {
+    "name": "Gallery",
+    "icon": "eye-dropper"
+  },
+  "options": {},
+  "attributes": {
+    "Gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

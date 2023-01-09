@@ -1,0 +1,9 @@
+{
+  "name": "cms",
+  "script": "npm",
+  "args": "run start",
+  "cwd": "/home/wick/al-akbhar-admin",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

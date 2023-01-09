@@ -1,0 +1,81 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "UnderLiveSectionRight": {
+      "type": "component",
+      "repeatable": false,
+      "component": "article.article"
+    },
+    "WeChoseForYou": {
+      "type": "component",
+      "repeatable": false,
+      "component": "article.article"
+    },
+    "HomepageAuthors": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage-authors.homepage-authors"
+    },
+    "SupplementsHome": {
+      "type": "component",
+      "repeatable": true,
+      "component": "supplements-home.supplements-home"
+    },
+    "MetaTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text"
+    },
+    "HomepagePodcasts": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage-podcasts.podcasts"
+    },
+    "HomepageVideos": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage-videos.homepage-videos"
+    },
+    "Lebanon": {
+      "type": "dynamiczone",
+      "components": [
+        "featured.featured-article",
+        "articles-grid.article-grid"
+      ],
+      "required": true
+    },
+    "Arab": {
+      "type": "dynamiczone",
+      "components": [
+        "featured.featured-article",
+        "articles-grid.article-grid"
+      ]
+    },
+    "World": {
+      "type": "dynamiczone",
+      "components": [
+        "featured.featured-article",
+        "articles-grid.article-grid"
+      ]
+    },
+    "TopBanner": {
+      "type": "dynamiczone",
+      "components": [
+        "featured.featured-article",
+        "featured.featured-malaf",
+        "articles-grid.article-grid"
+      ]
+    }
+  }
+}

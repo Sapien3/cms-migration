@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "s3_assets",
+  "info": {
+    "name": "S3 Asset",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "path": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "bucket": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "datetime"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_categories_ads_categories_ads",
+  "info": {
+    "icon": "archive",
+    "displayName": "CategoriesAds"
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section"
+    }
+  }
+}

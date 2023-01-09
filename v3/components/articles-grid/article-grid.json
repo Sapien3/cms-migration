@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_article_grid_article_grids",
+  "info": {
+    "name": "Articles Grid",
+    "icon": "grip-horizontal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "collection": "article"
+    }
+  }
+}

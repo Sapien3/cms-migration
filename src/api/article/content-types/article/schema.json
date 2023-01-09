@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::author.author",
+      "inversedBy": "Articles"
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": true,
+      "required": false
+    },
+    "Headline": {
+      "type": "string",
+      "required": true
+    },
+    "Slugline": {
+      "type": "string"
+    },
+    "Byline": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "richtext"
+    },
+    "RelatedArticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "PrimarySection": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::section.section"
+    },
+    "ShortURL": {
+      "type": "string"
+    },
+    "publish_at": {
+      "type": "datetime"
+    },
+    "SocialTitle": {
+      "type": "string"
+    },
+    "SocialImage": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "Section": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section"
+    },
+    "Summary": {
+      "type": "text"
+    },
+    "Attachment": {
+      "type": "string"
+    },
+    "Caption": {
+      "type": "string"
+    },
+    "ReadCount": {
+      "type": "integer"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "Articles"
+    },
+    "HideFeatured": {
+      "type": "boolean"
+    },
+    "top_article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::top-article.top-article",
+      "inversedBy": "article"
+    },
+    "link": {
+      "type": "string"
+    },
+    "Edition": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::edition.edition",
+      "inversedBy": "Article"
+    },
+    "Malaf": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::malafat.malafat",
+      "inversedBy": "articles"
+    },
+    "Supplement": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::supplement.supplement",
+      "inversedBy": "articles"
+    }
+  }
+}

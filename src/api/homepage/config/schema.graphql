@@ -1,0 +1,53 @@
+const { find2 } = require('../controllers/homepage')
+
+module.exports = {
+  definition: `
+  type ComponentHomepageAuthorsHomepageAuthors2 {
+    id: ID!
+    authors(sort: String, limit: Int, start: Int, where: JSON): [Author2]
+  },
+  type Homepage2 {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    MainFeatured: ComponentArticleArticle
+    TopFeaturedRegularArticle: ComponentArticleArticle
+    TopFeaturedGalleryArticle: ComponentArticleArticle
+    TopFeaturedGalleryVideo: ComponentArticleArticle
+    LiveSectionLeft: ComponentArticleArticle
+    LiveSectionRight: ComponentArticleArticle
+    UnderLiveSectionLeft: ComponentArticleArticle
+    UnderLiveSectionRight: ComponentArticleArticle
+    LebanonFeaturedArticle: ComponentArticleArticle
+    LebanonBelowFeatured: ComponentArticleArticle
+    WeChoseForYou: ComponentArticleArticle
+    ArabFeatured: ComponentArticleArticle
+    BelowArabFeatured: ComponentArticleArticle
+    Podcasts: ComponentArticleArticle
+    WorldFeatured: ComponentArticleArticle
+    BelowWorldFeatured: ComponentArticleArticle
+    HomepageAuthors: ComponentHomepageAuthorsHomepageAuthors2
+    DefaultVideo: UploadFile
+    DefaultVideoURL: String
+    SupplementsHome: [ComponentSupplementsHomeSupplementsHome]
+    MetaTitle: String
+    MetaDescription: String
+  }
+  `,
+  query: `
+  homepage2(
+    publicationState: PublicationState
+  ): Homepage2
+  `,
+  type: {
+  },
+  resolver: {
+    Query: {
+      homepage2: {
+        description: 'Return the Homepage with articles',
+        resolver: find2,
+        resolverOf: 'application::homepage.homepage.find2'
+      }
+    }
+  }
+};
